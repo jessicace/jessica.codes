@@ -1,0 +1,70 @@
+:root {
+  --primary-color: rgb(41, 82, 109);
+  --font-color: rgba(207, 236, 255, 0.6);
+}
+
+body {
+  margin: 0;
+  box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Fira Code';
+  padding: 1em 2em;
+  text-transform: lowercase;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: rgba(207, 236, 255, 0.6);
+  background: radial-gradient(circle at center left, rgb(41, 82, 109), rgb(8, 36, 54));
+}
+
+@supports (color: var(--font-color)) {
+  body {
+    background: radial-gradient(circle at center left, var(--primary-color), rgb(8, 36, 54));
+    color: var(--font-color); 
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+ul.terminal {
+  list-style-type: none;
+}
+
+ul.terminal  > li::before {
+  content: "\203A ";
+}
+
+ul.terminal ul li {
+  display: inline;
+}
+
+@supports (list-style-type: "\203A") {
+  ul.terminal {
+    list-style-type: "\203A";
+  }
+  ul.terminal > li {
+    padding-left: 1em;
+  }
+  ul.terminal  > li::before {
+    content: none;
+  }
+}
+
+/* Link Styles */
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
