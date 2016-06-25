@@ -1,0 +1,23 @@
+{
+  "name": "jessica.codes",
+  "version": "0.1.0",
+  "description": "Personal website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicace/jessica.codes.git"
+  },
+  "author": "Jessica Claire Edwards",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jessicace/jessica.codes/issues"
+  },
+  "homepage": "https://github.com/jessicace/jessica.codes#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "postcss-cli": "^2.5.2"
+  }
+}
