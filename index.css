@@ -1,0 +1,80 @@
+:root {
+  --primary-color: rgb(41, 82, 109);
+  --font-color: rgba(207, 236, 255, 0.6);
+}
+
+body {
+  background: radial-gradient(
+    circle at center left,
+    rgb(41, 82, 109),
+    rgb(8, 36, 54)
+  );
+  box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  color: rgba(207, 236, 255, 0.6);
+  font-family: Fira Code;
+  font-weight: 300;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 1em 2em;
+  text-transform: lowercase;
+  width: 100vw;
+}
+
+@supports (color: var(--font-color)) {
+  body {
+    background: radial-gradient(
+      circle at center left,
+      var(--primary-color),
+      rgb(8, 36, 54)
+    );
+    color: var(--font-color);
+  }
+}
+
+ul {
+  display: inline;
+  padding: 0;
+}
+
+.terminal {
+  list-style-type: none;
+}
+
+.terminal > li::before {
+  content: '\203A';
+}
+
+.terminal ul li {
+  display: inline;
+}
+
+@supports (list-style-type: '\203A') {
+  .terminal {
+    list-style-type: '\203A';
+  }
+
+  .terminal > li {
+    padding-left: 1em;
+  }
+
+  .terminal > li::before {
+    content: none;
+  }
+}
+
+/* Link Styles */
+
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

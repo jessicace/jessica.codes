@@ -1,0 +1,8 @@
+{
+  "use": [ "stylelint", "autoprefixer" ],
+  "input": "*.css",
+  "output": "./build/index.css",
+  "autoprefixer": {
+    "browsers": "> 5%"
+  }
+}
